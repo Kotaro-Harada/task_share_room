@@ -1,0 +1,18 @@
+= stylesheet_link_tag 'common','index'
+p 検索結果： 件
+.wrapper
+  = link_to room_path(room) do
+    .search
+      -@rooms.each do |room|
+        .search_rooms
+          .room_photo
+            -if room.photo.attached?
+              = image_tag room.photo.variant(resize_to_fill: [300,180]), class: 'photo'
+        .room_information
+          .room_name = room.name
+          .room_adress = room.adress
+          .room_price = room.price.to_s(:delimited, delimiter: ",") + "円"
+
+
+
+

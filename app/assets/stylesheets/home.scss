@@ -1,0 +1,55 @@
+body{
+  background-image: url('port-6587129_1280.webp');
+  background-repeat: no-repeat;
+  background-size: 100% 720px;
+}
+.search{
+  max-width: 500px;
+  min-height: 200px;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: white;
+  margin-top: 380px;
+  margin-left: 100px;
+}
+.search p{
+  margin: 0;
+  font-size: 25px;
+}
+.push{
+  height: 60px;
+}
+.photo{
+  width: 230px;
+  height: 330px;
+  border-radius: 10px;
+}
+.recommend_place{
+  max-width: 1000px;
+  margin: 30px auto;
+}
+.recommend_place p{
+  font-size: 25px;
+  font-weight: bold;
+}
+.recommended_four_places{
+  display:flex;
+  justify-content: space-between;
+  position: relative;
+}
+.recommended_four_places p{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  justify-content: space-between;
+  margin-left: 90px;
+}
+.search_area, .button{
+  width: 100%;
+  margin-bottom: 20px;
+  height: 30px;
+  font-size: 18px;
+}

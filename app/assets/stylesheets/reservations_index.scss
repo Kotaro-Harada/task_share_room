@@ -1,0 +1,46 @@
+p{
+  font-size: 25px;
+}
+.wrapper{
+  margin:0 40px;
+  min-height: 480px;
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+th{
+  line-height: 30px;
+  border-top: 1px solid rgb(201, 201, 201);
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+td{
+  text-align: center;
+  font-size: 15px;
+  border-bottom: 1px solid rgb(201, 201, 201);
+  height: 170px;
+}
+.room_name{
+  text-align: start;
+  font-size: 20px;
+}
+img{
+  vertical-align: middle;
+}
+.edit p, .delete p{
+  font-size: 20px;
+}
+.edit_room, .delete_room, #reserved_room_name, #created_room_name, .delete_reservation{
+  text-decoration: none;
+}
+.edit{
+  background-color: rgb(43, 152, 255);
+  color: white;
+  border-radius: 5px;
+}
+.delete{
+  background-color: rgb(255, 74, 29);
+  color: white;
+  border-radius: 5px;
+}
+

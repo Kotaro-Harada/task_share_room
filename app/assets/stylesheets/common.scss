@@ -1,0 +1,137 @@
+body{
+  margin: 0;
+  height: 100vh;
+}
+header{
+  background-color: black;
+  height: 60px;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+.header_search{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.search_adress, .search_keyword, .search_price, .search_room_button{
+  margin: 10px 10px;
+  height: 30px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 18px;
+  width: 150px;
+}
+.search_room_button{
+  width: 60px;
+}
+.search_room_forms{
+  display: flex;
+  height: 50px;
+  width: 800px;
+}
+footer{
+  background-color: black;
+  height: 150px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.to_home{
+  width: 180px;
+  height: 50px;
+}
+.aaa p{
+  width: 20px;
+  margin: 0;
+}
+#to_home{
+  color: white;
+  text-decoration: none;
+}
+.user_avatar{
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  font-size: 20px;
+  align-items: center;
+}
+.poteshare{
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+.current_user_avatar{
+  margin: 0 10px;
+}
+#user_icon{
+  display: flex;
+  align-items: center;
+  border-radius: 100%;
+  cursor: pointer;
+	transition-duration: 0.5s;
+}
+.user_icon{
+  display: flex;
+  justify-content: right;
+}
+.header_login{
+  background-color: rgb(32, 121, 255);
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 15px;
+  margin-right: 10px;
+}
+#header_login{
+  color: white;
+  text-decoration: none;
+}
+.header_create_account{
+  background-color: gray;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 15px;
+}
+#header_create_account{
+  color: white;
+  text-decoration: none;
+}
+.menu{
+  width: 350px;
+  height: 180px;
+  font-size: 15px;
+  background-color: white;
+  padding: 10px;
+  line-height: 30px;
+  border-left: 1px solid rgb(216, 216, 216);
+  border-bottom: 1px solid rgb(216, 216, 216);
+  position:relative;
+  display: none;
+  top: 130px;
+}
+#menu_text{
+  text-decoration: none;
+  color: black;
+}
+.menu_content{
+  width: 150px;
+}
+.menu.display{
+  display: block;
+}
+.user_avatar.display{
+  margin-right: -171px;
+}
+.notice{
+  color: white;
+  background-color: aqua;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+.header_create_account{
+  margin-right: 20px;
+}

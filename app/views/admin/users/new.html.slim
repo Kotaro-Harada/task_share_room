@@ -1,0 +1,25 @@
+= stylesheet_link_tag 'common','admin/user_new'
+.wrapper
+  .create_account
+    p 新しいアカウントを作成
+    = form_with model: [:admin, @user], local: true do |f|
+      = render 'shared/error', model: f.object
+      .form-group
+        = f.text_field :name, placeholder: "ユーザー名", class: "form-control"
+      .form-group
+        = f.text_field :email, placeholder: "メールアドレス", class: "form-control"
+      .form-group
+        = f.password_field :password, placeholder: "パスワード", class: "form-control"
+      .form-group
+        = f.password_field :password_confirmation, placeholder: "パスワード（確認）", class: "form-control"
+      .form-check
+        = f.label :admin, class: "form-check-label" do
+          = f.check_box :admin, class: "form-check-input"
+          | 管理者権限
+      .form-submit
+        = f.submit "新しいアカウントを作成", class: "submit"
+    .login
+      = link_to "既にアカウントをお持ちの方はログイン", login_path, class: "link_login"
+
+
+

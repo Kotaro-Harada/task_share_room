@@ -1,0 +1,77 @@
+.search{
+  display: flex;
+  margin: 10px 60px;
+  justify-content: space-between;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.search_users{
+  margin: 10px 10px;
+  background-color: rgb(237, 247, 248);
+  height: auto;
+  border: 2px solid rgb(209, 209, 209);
+}
+.users_avatar{
+  padding-top: 5px;
+  margin: 0 auto;
+  width: 70px;
+}
+.users_information{
+  margin: 10px;
+  height: auto;
+}
+.users_introduction, .users_rooms{
+  border-top: 1px solid rgb(216, 216, 216);
+  padding: 5px 0;
+}
+.users_introduction p{
+  font-weight: bold;
+  font-size: 15px;
+  text-align: left;
+}
+.body{
+  height: 100vh;
+}
+.wrapper{
+  min-height: 450px;
+}
+.result p{
+  margin-left: 70px;
+  font-size: 25px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.result{
+  width: auto;
+  margin-right: 20px;
+}
+.result_sort{
+  display: flex;
+}
+.sort{
+  display: flex;
+  align-items: center;
+}
+.avatar{
+  border-radius: 100%;
+}
+.delete{
+  background-color: rgb(255, 74, 29);
+  color: white;
+  border-radius: 5px;
+  height: 30px;
+}
+.delete p{
+  font-size: 20px;
+  text-align: center;
+}
+.notice{
+  color: white;
+  background-color: aqua;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+}

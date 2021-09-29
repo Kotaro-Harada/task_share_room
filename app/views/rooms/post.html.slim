@@ -1,0 +1,31 @@
+= stylesheet_link_tag 'common','reservations_index'
+.notice
+    = flash[:notice]
+.wrapper
+  p 登録済みルーム一覧
+  .rserved_room
+    table
+      thead
+        tr
+          th ルーム画像
+          th ルーム名
+          th ルーム紹介
+          th 料金
+          th 作成日
+          th
+      tbody
+        -@rooms.each do |room|
+          tr
+            td.photo = link_to room_path(room.id)
+              = image_tag room.photo.variant(resize_to_fill: [250,150])
+            td.room_name = link_to "#{room.name}", room_path(room.id), id: "created_room_name"
+            td = room.introduction
+            td = room.price.to_s(:delimited, delimiter: ",") + "円"
+            td = l room.created_at, format: :default
+            td = link_to edit_room_path(room.id), class: "edit_room" do
+              .edit
+                p 編集
+              = link_to room_path(room.id), method: :delete, data: {confirm: "ルームを削除してもよろしいですか？"}, class: "delete_room" do
+                .delete
+                  p 削除
+
