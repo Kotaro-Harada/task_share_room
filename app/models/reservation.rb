@@ -1,13 +1,11 @@
 class Reservation < ApplicationRecord
   belongs_to :room
-
   validates :start_day, presence: true
   validates :end_day, presence: true
   validates :number_of_people, presence: true
-
   validate :end_day_not_before_start_day
   validate :start_day_not_before_today
-
+  
   private
     def end_day_not_before_start_day
       if end_day && start_day
