@@ -15,9 +15,7 @@ class User < ApplicationRecord
     presence: true,
     confirmation: true,
     length: {minimum: 6}
-
   validates :password, on: :update,
     confirmation: true,
     length: {minimum: 6}, if: Proc.new{|user| user.password.present?}
-
 end
