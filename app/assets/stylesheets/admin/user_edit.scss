@@ -1,0 +1,35 @@
+.wrapper{
+ margin: 10px auto;
+ max-width: 600px;
+}
+.edit_account{
+  border: 1px solid rgb(216, 216, 216);
+  margin-bottom: 25px;
+  padding-bottom: 30px;
+}
+.edit_account p{
+  font-size: 25px;
+}
+.form_group, .edit_account p{
+  margin: 25px auto;
+  text-align: center;
+}
+#account_form, .update{
+  height: 35px;
+  width: 300px;
+  box-sizing: border-box;
+  font-size: 17px;
+  padding: auto 0;
+}
+#back_page{
+  width: 300px;
+  padding: 5px 0;
+  display: block;
+  margin: auto;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  background-color: rgb(9, 116, 255);
+  align-items: center;
+  border-radius: 3px;
+}

@@ -1,0 +1,31 @@
+= stylesheet_link_tag 'common','reservations_index'
+.notice
+  = flash[:notice]
+.wrapper
+  p 予約済みルーム一覧
+  .rserved_room
+    table
+      thead
+        tr
+          th ルーム画像
+          th ルーム名
+          th ルーム紹介
+          th 合計料金
+          th 開始日
+          th 終了日
+          th 予約確定日時
+          th
+      tbody
+        -@reservation.each do |reservation|
+          tr
+            td = link_to room_path(reservation.room_id)
+              = image_tag reservation.room.photo.variant(resize_to_fill: [250,150])
+            td.room_name = link_to "#{reservation.room.name}", room_path(reservation.room_id), id: "reserved_room_name"
+            td = reservation.room.introduction
+            td = (reservation.room.price * reservation.number_of_people).to_s(:delimited, delimiter: ",") + "円"
+            td = l reservation.start_day, format: :short
+            td = l reservation.end_day, format: :short
+            td = l reservation.created_at, format: :default
+            td = link_to reservation_path(reservation.id), method: :delete, data:{confirm: "予約を削除してもよろしいでしょうか？"}, class: "delete_reservation" do
+              .delete
+                p 削除

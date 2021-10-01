@@ -1,0 +1,31 @@
+= stylesheet_link_tag 'home','common'
+body
+  .notice
+    = flash[:notice]
+  .search
+    p Potepan Shareでまだ体験したことのない旅をしよう
+    | エリア
+    .search_area
+      = search_form_for @q, url: search_rooms_path do |f|
+        = f.search_field :adress_cont, placeholder: "東京", class: "search_area"
+        = f.submit "探す", class: "button"
+  .push
+  .recommend_place
+    p おすすめのエリア
+    .recommended_four_places
+      .tokyo
+        = link_to search_rooms_path q: {adress_cont: "東京"}
+          = image_tag "img_tokyo.jpeg", class: "photo"
+          p 東京
+      .osaka
+        = link_to search_rooms_path q: {adress_cont: "大阪"}
+          = image_tag "img_osaka.jpeg", class: "photo"
+          p 大阪
+      .kyoto
+        = link_to search_rooms_path q: {adress_cont: "京都"}
+          = image_tag "img_kyoto.jpeg", class: "photo"
+          p 京都
+      .sapporo
+        = link_to search_rooms_path q: {adress_cont: "札幌"}
+          = image_tag "img_sapporo.jpeg", class: "photo"
+          p 札幌

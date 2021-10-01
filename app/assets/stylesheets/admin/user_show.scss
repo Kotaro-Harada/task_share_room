@@ -1,0 +1,58 @@
+.user_information{
+  display: flex;
+  height: 100vh;
+}
+.side_bar{
+  width: 200px;
+  border-right: 1px solid rgb(216, 216, 216);
+  line-height: 35px;
+}
+.content{
+  margin: 10px auto;
+  width: 150px;
+  font-size: 17px;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  color: rgb(9, 198, 255);
+}
+.account{
+  width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+}
+tr th{
+  text-align: left;
+}
+.account p{
+  font-size: 20px;
+  margin-top: 0;
+}
+table{
+  margin-left: 10px;
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td{
+  border-top: 1px solid rgb(216, 216, 216);
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+tr{
+  line-height: 60px;
+}
+.edit_account{
+  margin: 20px 10px;
+}
+#button{
+  width: 200px;
+  height: 40px;
+  font-size: 15px;
+}
+.menu_account{
+  border-right: 3px solid rgb(9, 198, 255);
+}
+.menu_profile{
+  border: none;
+}

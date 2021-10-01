@@ -1,0 +1,26 @@
+= stylesheet_link_tag 'common','admin/user_index'
+.notice
+    = flash[:notice]
+.result_sort
+  .result
+    p ユーザー人数：#{@users.count}人
+  .sort
+.wrapper
+  .search
+    -@users.each do |user|
+      .search_users
+        = link_to admin_users_profile_path(user)
+          .users_avatar
+            -if user.avatar.attached?
+              = image_tag user.avatar.variant(resize_to_fill: [70,70]), class: 'avatar'
+          .users_information
+            .users_name = "ユーザー名：#{user.name}"
+            .users_introduction
+              | 自己紹介
+              br
+              = user.introduction
+            .users_rooms
+              | 登録ルーム数：#{user.rooms.count}件
+            = link_to admin_user_path(user.id), method: :delete, data:{confirm: "ユーザーを削除してもよろしいでしょうか？"}, class: "delete_user" do
+              .delete
+                p 削除

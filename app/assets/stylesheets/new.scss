@@ -1,0 +1,71 @@
+body{
+  background-color: rgb(237, 245, 242);
+}
+.content{
+  display:flex;
+}
+.sidebar{
+  max-height: 130vh;
+  background-color: white;
+  width: 200px;
+  border-right: 2px rgb(172, 167, 167) solid;
+}
+.sidebar p{
+  color: rgb(41, 138, 218);
+  font-size: 19px;
+  margin-left: 20px;
+  border-right: 2px rgb(41, 138, 218) solid;
+  width: 150px;
+}
+.room_information{
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 20px;
+  height: auto;
+}
+.room_information tr{
+  border-top: 2px rgb(172, 167, 167) solid;
+}
+.room_information th{
+  margin: 0px auto 20px auto;
+  width: auto;
+  display: flex;
+}
+.room_information td{
+  padding-left: 50px;
+  height: 30px;
+}
+.neccesary{
+  background-color: rgb(243, 112, 89);
+  color: white;
+  border-radius: 3px;
+  padding: 2px;
+  margin-left: 5px;
+  font-size: 11px;
+}
+table{
+  margin: auto;
+  width: 700px;
+  height: auto;
+  border-collapse: separate;
+  border-spacing: 0px 30px;
+}
+.room_information p{
+  font-size: 20px;
+}
+.input, .input_area{
+  height: 30px;
+  width: 500px;
+  font-size: 20px;
+}
+.input_area{
+  height: 80px;
+}
+tbody{
+  min-height: 600px;
+}
+.button{
+  width: 100px;
+  height: 40px;
+}

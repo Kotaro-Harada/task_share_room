@@ -1,0 +1,24 @@
+= stylesheet_link_tag 'common','admin/user_show'
+.notice
+    = flash[:notice]
+.user_information
+  .side_bar
+    .content
+      .menu_account
+        = link_to "アカウント", admin_user_path, id: "menu_text"
+      br
+      .menu_profile
+        = link_to "プロフィール", admin_users_profile_path, id: "menu_text"
+  .account
+    p アカウント
+    .mail_password
+      table
+        tr
+          th メールアドレス
+          td = @user.email
+        tr
+          th パスワード
+          td &#042;&#042;&#042;&#042;&#042;&#042;&#042;&#042;&#042;
+      -if session[:user_id] == @user.id
+        .edit_account
+          = button_to "編集", {controller: "admin/users", action: "edit"}, {method: :get, id: "button"}

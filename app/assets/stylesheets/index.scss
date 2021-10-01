@@ -1,0 +1,61 @@
+.search{
+  display: flex;
+  margin: 10px 60px;
+  justify-content: space-between;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.search_rooms{
+  margin: 10px 10px;
+  background-color: rgb(237, 247, 248);
+  height: auto;
+  border: 2px solid rgb(209, 209, 209);
+}
+.room_photo{
+  padding-top: 5px;
+}
+.room_information{
+  margin: 10px 10px 0 10px;
+}
+.room_name{
+  font-size: 20px;
+  font-weight: bold;
+  color: gray;
+  margin-bottom: 10px;
+}
+.room_adress{
+  font-weight: bold;
+}
+.room_price{
+  text-align: end;
+  padding-bottom: 10px;
+}
+.push{
+  max-height: 100px;
+}
+.body{
+  height: 100vh;
+}
+.wrapper{
+  min-height: 450px;
+}
+p{
+  margin-left: 70px;
+  font-size: 25px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.result{
+  width: 250px;
+  margin-right: 20px;
+}
+.result_sort{
+  display: flex;
+}
+.sort{
+  display: flex;
+  align-items: center;
+}

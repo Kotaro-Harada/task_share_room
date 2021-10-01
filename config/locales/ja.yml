@@ -1,0 +1,27 @@
+ja:
+  time:
+    formats:
+      default: "%Y年%-m月%-d日%-H時%-M分"
+      short: "%Y年%-m月%-d日"
+  activerecord:
+    models:
+      room: ルーム
+    attributes:
+      room:
+        name: ルーム名
+        introduction: ルーム紹介
+        adress: 住所
+        photo: ルーム画像
+        price: 料金
+      user:
+        name: 名前
+        introduction: 自己紹介
+        password: パスワード
+        email: メールアドレス
+        password_confirmation: パスワード(確認)
+      reservation:
+        start_day: 開始日
+        end_day: 終了日
+        number_of_people: 人数
+
+

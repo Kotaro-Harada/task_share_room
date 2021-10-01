@@ -1,0 +1,43 @@
+= stylesheet_link_tag 'common',"new"
+.content
+  .sidebar
+    p 基本情報
+  .room_information
+    p ルーム情報編集
+    = form_with model: @room, local: true do |f|
+      = render 'shared/error', model: f.object
+      table
+        tr
+          th
+            = f.label :name, 'ルーム名'
+            .neccesary 必須
+          td
+            = f.text_field :name, placeholder: 'ルーム名を入力', class: 'input'
+        tr
+          th
+            = f.label :introduction, 'ルーム紹介'
+            .neccesary 必須
+          td
+            = f.text_area :introduction, placeholder: 'ルーム説明を入力', class: 'input_area'
+        tr
+          th
+            = f.label :price, '料金'
+            .neccesary 必須
+          td
+            = f.text_field :price, placeholder: '1日あたり料金を入力', class: 'input'
+        tr
+          th
+            = f.label :adress, '住所'
+            .neccesary 必須
+          td
+            = f.text_field :adress, placeholder: '住所を入力', class: 'input'
+        tr
+          th
+            = f.label :photo, 'ルーム画像'
+            .neccesary 必須
+          td
+            = f.file_field :photo
+            = f.hidden_field :user_id, value:current_user.id
+        tr
+          th
+            = f.submit '更新', class: 'button'

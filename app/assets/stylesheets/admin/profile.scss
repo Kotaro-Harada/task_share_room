@@ -1,0 +1,30 @@
+.account{
+  height: 500px;
+}
+.name{
+  height: 25px;
+  font-size: 18px;
+}
+.introduction{
+  height: 80px;
+  width: 300px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.avatar{
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+.update{
+  width: 100px;
+  height: 40px;
+}
+.menu_account{
+  border: none;
+}
+.menu_profile{
+  border-right: 3px solid rgb(9, 198, 255);
+}

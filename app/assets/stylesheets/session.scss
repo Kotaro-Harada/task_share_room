@@ -1,0 +1,51 @@
+.login{
+  margin: 20px auto;
+  max-width: 400px;
+  min-height: 250px;
+  padding: 30px 50px;
+  border: 1px solid rgb(206, 206, 206);
+}
+p{
+  text-align: center;
+}
+.session_form{
+  width: 300px;
+  height: 30px;
+  font-size: 18px;
+  margin: 10px auto;
+}
+.form-group, .login_button, .link_new_account{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.login_button{
+  width: 300px;
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.link_new_account{
+  text-decoration: none;
+  color: rgb(32, 139, 238);
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.form-group::before{
+  content: "必須";
+  background-color: rgb(243, 112, 89);
+  color: white;
+  border-radius: 3px;
+  padding: 2px;
+  margin: auto 0;
+  font-size: 11px;
+  height: 20px;
+}
+.alert{
+  border:2px solid #990000;
+  padding: 5px; font-weight:850;
+  background:#FFEBE8;
+}

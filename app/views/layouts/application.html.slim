@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title
+      | Poteshare
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = include_gon
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'common', 'data-turbolinks-track': 'reload'
+    script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css"
+    script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"
+  header
+    .header_search
+      .poteshare
+        .to_home
+          = link_to 'Pote Share', rooms_home_path, id: "to_home"
+        .search_room_forms
+          = render partial: "shared/searchform",locals: {q: @q}
+      .user_avatar
+        -if current_user
+          = current_user.name
+          .current_user_avatar
+            .user_icon
+              = image_tag current_user.avatar.variant(resize_to_fill: [50,50]), id: "user_icon"
+        -else
+          = link_to login_path, id: "header_login" do
+            .header_login
+              | ログイン
+          = link_to new_admin_user_path, id: "header_login"  do
+            .header_create_account
+              | 登録する
+      .menu
+        .menu_content
+          = render partial: "shared/menu"
+  body
+    == yield
+  footer
+    | &copy 2020 POTEPAN.INC.

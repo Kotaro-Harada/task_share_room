@@ -1,0 +1,33 @@
+= stylesheet_link_tag 'common','admin/user_edit'
+.wrapper
+  .edit_account
+    p アカウント編集
+    = form_with model: [:admin, @user], local: true do |f|
+      = render 'shared/error', model: f.object
+      -if alert
+        .alert
+          ul
+           li = alert
+      .form_group
+        = f.label :email, "メールアドレス"
+        br
+        = f.text_field :email, placeholder: "#{@user.email}", id: "account_form"
+      .form_group
+        = f.label :password, "変更後パスワード（変更する場合のみ記入）"
+        br
+        = f.password_field :password, placeholder: nil,id: "account_form"
+      .form_group
+        = f.label :password_confirmation, "パスワード確認用（変更する場合のみ記入）"
+        br
+        = f.password_field :password_confirmation, placeholder: nil, id: "account_form"
+      .form_group
+        = f.label :current_password, "現在のパスワード"
+        br
+        = f.password_field :current_password, placeholder: "現在のパスワードを入力", id: "account_form"
+      .form_group
+        = f.submit "更新", class: "update", id: "account_form"
+
+      = link_to admin_user_path, id: "back_page" do
+        .back
+          | 戻る
+    .push
